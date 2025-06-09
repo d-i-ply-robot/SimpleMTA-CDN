@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities">
+
+  <Identity
+    Name="MilestoneTrendAnalysis"
+    Publisher="CN=YourPublisherName"
+    Version="1.0.0.0" />
+
+  <Properties>
+    <DisplayName>Milestone Trend Analysis</DisplayName>
+    <PublisherDisplayName>Your Publisher Name</PublisherDisplayName>
+    <Logo>resources\StoreLogo.png</Logo>
+  </Properties>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.17763.0" MaxVersionTested="10.0.19041.0" />
+    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.17763.0" MaxVersionTested="10.0.19041.0" />
+  </Dependencies>
+
+  <Resources>
+    <Resource Language="x-generate"/>
+  </Resources>
+
+  <Applications>
+    <Application Id="App" Executable="MilestoneTrendAnalysis_x64.exe" EntryPoint="Windows.FullTrustApplication">
+      <uap:VisualElements
+        DisplayName="Milestone Trend Analysis"
+        Description="A GUI application for analyzing Primavera P6 XER files to produce milestone trend analysis graphs."
+        BackgroundColor="transparent"
+        Square150x150Logo="resources\Square150x150Logo.png"
+        Square44x44Logo="resources\Square44x44Logo.png" />
+    </Application>
+  </Applications>
+
+  <Capabilities>
+    <rescap:Capability Name="runFullTrust" />
+    <rescap:Capability Name="broadFileSystemAccess" />
+  </Capabilities>
+
+  <!-- Architecture-specific resources -->
+  <Resources TargetDeviceFamily="Windows.Desktop">
+    <Resource Language="x-generate"/>
+  </Resources>
+
+  <!-- x64 architecture -->
+  <Resources TargetDeviceFamily="Windows.Desktop" Architecture="x64">
+    <Resource Language="x-generate"/>
+  </Resources>
+
+  <!-- x86 architecture -->
+  <Resources TargetDeviceFamily="Windows.Desktop" Architecture="x86">
+    <Resource Language="x-generate"/>
+  </Resources>
+</Package> 
